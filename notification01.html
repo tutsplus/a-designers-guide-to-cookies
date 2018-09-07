@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Notifications</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">This Site Uses Cookies</h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                      By continuing to use this site, you
+                      agree to our <a href="">cookie policy</a>.
+                  </p>
+                  <button class="btn btn-primary" data-dismiss="modal">I AGREE</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script>
+            $('#modal-cookies').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+
+            function getCookie(cookieName) {
+                var cookieArray = document.cookie.split('; ');
+                cookieName = cookieName + '=';
+                for(var i = 0; i < cookieArray.length; i++) {
+                    var c = cookieArray[i];
+                    if (c.indexOf(cookieName) == 0) {
+                        return c.substring(cookieName.length, c.length);
+                    }
+                }
+                return '';
+            }
+        </script>
+    </body>
+</html>
